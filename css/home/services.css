@@ -1,0 +1,275 @@
+.owl-carousel .owl-item {
+  display: flex;
+  justify-content: center;
+}
+
+.owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none; /* Ensure navigation buttons don't block hover events on the carousel */
+}
+
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: #fff; /* White arrow color */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  pointer-events: auto; /* Allow clicking */
+}
+
+.owl-nav .owl-prev {
+  left: 10px; /* Position to the left end */
+}
+
+.owl-nav .owl-next {
+  right: 10px; /* Position to the right end */
+}
+
+.services-home {
+  border-top: 2px solid rgb(170, 170, 170);
+}
+
+#service-icons-wrapper {
+  overflow: hidden; /* Hide overflow for the marquee effect */
+  padding-top: 10px;
+  padding-bottom: 35px;
+  z-index: 999;
+}
+
+#service-icons {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+#service-icons a {
+  position: relative;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px; /* Add some margin to ensure there's space for the icon title */
+}
+
+#service-icons a:hover {
+  transform: scale(1.1); /* Scale up the icon by 10% on hover */
+}
+
+.icon-title {
+  position: absolute;
+  width: 100%; /* Ensure the title spans the full width of the anchor */
+  left: 0;
+  top: 100%; /* Position right below the image */
+  text-align: center; /* Center the text */
+  visibility: hidden; /* Hide by default */
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease-in-out; /* Transition for smooth fading */
+  font-size: 12px; /* Adjust font size as needed */
+  color: #222222; /* Text color */
+  background-color: rgba(231, 231, 231, 0.75);
+  border-radius: 3px;
+  padding: 2px 0; /* Adjust padding for better visibility */
+  pointer-events: none; /* Ensure it doesn't interfere with the hover state */
+  text-wrap: balance;
+}
+
+#service-icons a:hover .icon-title {
+  visibility: visible;
+  opacity: 1; /* Show the title on hover */
+}
+
+.heading-services {
+  position: relative;
+  display: flex;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  width: 100%; /* Ensures the flex container spans the full width */
+  margin: 0 0 20px 0; /* Space above and below the heading container */
+  height: 50px; /* Adjust height as necessary to fit your design */
+}
+
+.heading-services h2 {
+  padding: 0 20px; /* Padding on the sides to ensure space around the text */
+  font-size: 2em; /* Sets the size of the font */
+  margin: 0; /* Removes default margin to maintain alignment */
+  width: auto; /* Auto width to only take as much space as it needs */
+}
+
+.heading-services::before,
+.heading-services::after {
+  content: "";
+  flex-grow: 1; /* Allows the lines to grow and fill space */
+  background: rgb(170, 170, 170); /* Color of the lines */
+  height: 1.5px; /* Thickness of the lines */
+  align-self: center; /* Centers the lines vertically within the flex container */
+  margin: 0 20px; /* Adds horizontal space around the lines */
+}
+
+.heading-services .highlight {
+  position: relative;
+  padding-bottom: 10%; /* Extends the background lower than the text base */
+}
+
+.heading-services .highlight::after {
+  content: "";
+  position: absolute;
+  left: -1px; /* Slightly extends the background to the left */
+  right: -3px; /* Extends the background more to the right */
+  bottom: 48%; /* Positions the bottom of the gradient relative to the parent */
+  height: 30%; /* Height of the gradient background relative to the parent */
+  background-image: linear-gradient(
+    to right,
+    #e15a5a,
+    #e0b66e
+  ); /* Gradient effect */
+  z-index: -1; /* Ensures the gradient is behind the text */
+}
+
+/* SERVICE CARDS */
+
+#service-cards {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.card {
+  width: 300px; /* Adjust width as needed */
+  border: 1px solid #ccc; /* Light grey border */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Keeps child elements contained within the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: left; /* Aligns text to the center */
+  background: #ffffff; /* White background */
+}
+
+.card-image {
+  width: 100%; /* Ensures image covers the full width of the card */
+}
+
+.card-content {
+  padding: 15px; /* Padding inside the card */
+}
+
+.card-heading {
+  margin-top: 0; /* Removes top margin from the heading */
+  color: #333333; /* Dark grey color for text */
+  position: relative; /* Needed for positioning the pseudo-element */
+}
+
+.card-heading::after {
+  content: ""; /* Necessary for pseudo-elements */
+  position: absolute; /* Position relative to the heading */
+  bottom: 0; /* Aligns the line at the bottom of the heading */
+  left: -15px; /* Starts from the left edge */
+  width: 0; /* Initial width is 0 to be animated */
+  height: 1px; /* Thickness of the line */
+  background-color: #9a9a9a; /* Color of the line */
+}
+
+#card-heading-web::after {
+  width: 74%;
+}
+
+#card-heading-smm::after {
+  width: 78%;
+}
+
+#card-heading-seo::after {
+  width: 18%;
+}
+
+#card-heading-branding::after {
+  width: 34%;
+}
+
+.card-text {
+  color: #666666; /* Medium grey color for text */
+  font-size: 14px; /* Sets the font size */
+  margin-bottom: 15px; /* Adds space below the paragraph */
+  margin-top: 10px;
+}
+
+.card-link {
+  color: #ab1320; /* Blue color for link */
+  text-decoration: none; /* Removes underline from the link */
+  font-weight: bold; /* Makes the link text bold */
+  display: inline-block; /* Allows the link to have padding and other block properties */
+}
+
+.arrow {
+  display: inline-block; /* Keeps the arrow aligned with the text */
+  transition: transform 0.3s ease; /* Smooth transition for moving the arrow */
+}
+
+.card-link:hover .arrow {
+  transform: translateX(5px); /* Moves the arrow to the right when hovering */
+}
+
+@media (max-width: 768px) {
+  .heading-services h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1000px) {
+  #service-icons-wrapper {
+    overflow: hidden; /* Hide overflow for the marquee effect */
+    white-space: nowrap; /* Prevent line breaks */
+  }
+
+  #service-icons {
+    display: inline-block; /* Keep icons in a single line */
+    animation: marquee 20s linear infinite; /* Apply the marquee animation */
+  }
+
+  #service-icons a {
+    display: inline-block; /* Keep icons in a single line */
+    margin-right: 50px; /* Space between icons */
+  }
+  .heading-services {
+    height: 0;
+    margin: 0;
+  }
+  .heading-services h2 {
+    font-size: 26px;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0); /* Start at the current position */
+  }
+  100% {
+    transform: translateX(
+      -50%
+    ); /* Move to the left by half the width of the content */
+  }
+}
+
+@media (max-width: 500px) {
+  .heading-services h2 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 365px) {
+  .heading-services h2 {
+    text-align: center;
+    width: 100%;
+  }
+
+  .heading-services::before,
+  .heading-services::after {
+    display: none;
+  }
+}

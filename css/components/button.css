@@ -1,0 +1,47 @@
+.btn-in {
+  display: flex;
+}
+
+.btn-out a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease; /* Smooth transition for text color changes */
+}
+
+.btn-text {
+  background-image: linear-gradient(to right, #e15a5a, #e0b66e);
+  border-radius: 30px 5px 5px 30px;
+  padding: 10px 5px 10px 15px;
+  transition: background-image 0.3s ease; /* Smooth transition for background changes */
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  border: 2px solid transparent;
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    linear-gradient(to right, #e15a5a, #e0b66e);
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  border-radius: 5px 30px 30px 5px;
+  padding: 10px 8px 10px 8px;
+  margin-left: 3px;
+  transition: transform 0.3s ease; /* Transition for transform effects */
+}
+
+/* Hover effect for the outer link container */
+.btn-out a:hover .btn-text {
+  background-image: linear-gradient(
+    to left,
+    #e15a5a,
+    #e0b66e
+  ); /* Reverse gradient direction */
+}
+
+.btn-out a:hover .btn-icon {
+  transform: translateX(5px); /* Move the icon to the right */
+}

@@ -1,0 +1,201 @@
+#hero-navbar {
+  background-image: url("/images/background/back.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#hero-sect {
+  padding: 50px 30px;
+  display: grid;
+  grid-template-rows: 0.7fr 0.3fr;
+  grid-template-columns: 0.6fr 0.4fr;
+  gap: 50px;
+  max-width: 2000px;
+}
+
+#hero-title {
+  padding-top: 30px;
+}
+#hero-title p {
+  color: #e15a5a;
+}
+
+#hero-title h1 {
+  font-size: 81px; /* Adjust the font size to a more appropriate value */
+  line-height: 1;
+  font-weight: 400;
+}
+
+/* #hero-companies {
+  padding-left: 5px;
+  padding-top: 70px;
+}
+
+#hero-companies p {
+  color: #3e3e3e;
+  font-weight: 300;
+} */
+
+#hero-review {
+  padding-top: 60px;
+
+}
+
+#hero-review p {
+  font-size: 1.5em;
+  font-weight: 300;
+  padding-bottom: 20px;
+}
+
+#hero-review a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  color: #3e3e3e;
+  padding-left: 20px;
+}
+
+#hero-review img {
+  margin-left: 20px;
+  border-radius: 10px;
+  opacity: 0.75;
+}
+#hero-review img:hover {
+  opacity: 1;
+}
+
+/* #hero-companies p {
+  padding-bottom: 10px;
+}
+#hero-companies img {
+  padding-right: 20px;
+  opacity: 0.75;
+}
+#hero-companies img:hover {
+  opacity: 1;
+}
+#hero-companies a {
+  text-decoration: none;
+} */
+
+#hero-companies {
+  padding-left: 5px;
+  padding-top: 70px;
+}
+
+#hero-companies p {
+  color: #3e3e3e;
+  font-weight: 300;
+  padding-bottom: 10px;
+}
+
+#hero-companies a {
+  text-decoration: none;
+  display: inline-block; /* Ensures a element size doesn't change */
+}
+
+#hero-companies img {
+  display: block; /* Prevents inline element gap */
+  padding-right: 20px;
+  opacity: 0.75;
+  width: auto; /* Ensures aspect ratio is maintained */
+}
+
+#hero-companies img:hover {
+  opacity: 1;
+}
+
+
+#hero-links {
+  display: flex;
+  align-items: baseline;
+  padding-top: 60px;
+}
+
+.icon-play {
+  padding-left: 20px;
+  padding-right: 5px;
+}
+
+#hero-vid {
+  text-align: center; /* Center everything in the hero-vid container */
+  position: relative; /* For absolute positioning of the thumbnail */
+}
+
+#hero-vid a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s ease; /* Smooth transition for color change */
+  display: block; /* Make the link a block to handle margin or padding if necessary */
+  position: relative; /* Position relative for absolute positioning of the image */
+}
+
+#hero-vid img.video-thumbnail {
+  position: absolute;
+  top: -120px; /* Position the image above the link */
+  left: 10px;
+  opacity: 0; /* Start fully transparent */
+  transition: opacity 0.3s ease, visibility 0s ease 0.3s; /* Transition for opacity and delay visibility to match */
+  width: 100%; /* Adjust width as needed, or set to auto if keeping image dimensions */
+  max-width: 300px; /* Limit size if necessary */
+  border-radius: 5px;
+  visibility: hidden; /* Start hidden and ensure it becomes visible with delay */
+}
+
+#hero-vid a:hover img.video-thumbnail,
+#hero-vid a:focus img.video-thumbnail {
+  opacity: 1; /* Make the image fully visible */
+  visibility: visible; /* Make the image appear */
+  transition: opacity 0.3s ease; /* Ensure visibility transition does not delay the opacity transition */
+}
+
+#hero-vid a:hover {
+  color: #e15a5a;
+}
+
+@media (max-width: 1133px) {
+  #hero-title h1 {
+    font-size: 72px;
+  }
+  #hero-sect {
+    grid-template-columns: 0.5fr 0.5fr;
+  }
+}
+
+@media (max-width: 1000px) {
+  #hero-sect {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px 20px 20px;
+    gap: 20px;
+  }
+  #hero-title {
+    padding-top: 0;
+  }
+  #hero-title h1 {
+    font-size: 8.5vw;
+  }
+  #hero-companies {
+    display: none;
+  }
+  #hero-review {
+    padding-top: 0;
+    width: 95%;
+    margin-bottom: 20px;
+  }
+  #hero-review p {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 500px) {
+  #hero-vid {
+    display: none;
+  }
+  #hero-title h1 {
+    font-size: 32px;
+  }
+  #hero-review p {
+    font-size: 16px;
+  }
+}

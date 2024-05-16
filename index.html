@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Preload critical resources -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link
+        href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap"
+        rel="stylesheet"
+    /></noscript>
+
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    /></noscript>
+
+    <link rel="preload" href="images/background/back.webp" as="image" />
+    <link rel="preload" href="components/navbar.js" as="script" />
+
+    <link rel="stylesheet" href="css/components/button.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/home/hero.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/home/services.css" />
+  </head>
+  <body>
+    <div id="hero-navbar">
+      <header>
+        <custom-navbar></custom-navbar>
+      </header>
+      <div id="all">
+        <section id="hero-sect">
+          <div id="hero-title">
+            <p>REACH NEW HEIGHTS</p>
+            <h1>
+              ELEVATE YOUR<br />
+              DIGITAL PRESENCE
+            </h1>
+          </div>
+
+          <div id="hero-review">
+            <p>
+              “Very happy with my business cards I got done by lionsmedia they
+              did outstanding work they were very helpful with the designs and
+              colors and layout I went with. always giving me honest input and
+              Ideas and delivered a product above expectations”
+            </p>
+            <a href="">
+              <picture>
+                <source type="image/webp" srcset="images/logos/spaint.webp" />
+                <img
+                  src="images/logos/spaint.png"
+                  width="70"
+                  height="65"
+                  alt="Sheldon Paints"
+                  loading="lazy"
+                />
+              </picture>
+            </a>
+          </div>
+
+          <div id="hero-companies">
+            <p>COMPANIES ALREADY GROWING</p>
+            <a href="">
+              <picture>
+                <source type="image/webp" srcset="images/logos/rsw.webp" />
+                <img
+                  src="images/logos/rsw.png"
+                  width="100"
+                  height="80.8"
+                  alt="River SideWash"
+                  loading="lazy"
+                />
+              </picture>
+            </a>
+            <a href="">
+              <picture>
+                <source type="image/webp" srcset="images/logos/lbplimo.webp" />
+                <img
+                  src="images/logos/lbplimo.png"
+                  width="160"
+                  height="72.63"
+                  alt="Lester B. Limo"
+                  loading="lazy"
+                />
+              </picture>
+            </a>
+            <a href="">
+              <picture>
+                <source type="image/webp" srcset="images/logos/cct.webp" />
+                <img
+                  src="images/logos/cct.png"
+                  width="135"
+                  height="74.1"
+                  alt="CCTraining"
+                  loading="lazy"
+                />
+              </picture>
+            </a>
+          </div>
+
+          <div id="hero-links">
+            <div class="btn-out">
+              <a href="#">
+                <div class="btn-in">
+                  <div class="btn-text">EXPLORE OUR WORK</div>
+                  <div class="btn-icon">
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div id="hero-vid">
+              <a href="#">
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="images/other/thumbnail.webp"
+                  />
+                  <img
+                    src="images/other/thumbnail.jpeg"
+                    alt="Video Thumbnail"
+                    class="video-thumbnail"
+                    loading="lazy"
+                  />
+                </picture>
+                <i class="fa-regular fa-circle-play icon-play"></i>GET TO KNOW
+                US IN 60s
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <section class="services-home">
+      <div id="service-icons-wrapper">
+        <div id="service-icons">
+          <a href="#">
+            <picture>
+              <source type="image/webp" srcset="images/icons/adwords.webp" />
+              <img
+                src="images/icons/adwords.png"
+                width="80px"
+                height="80px"
+                alt="AdWords"
+              />
+            </picture>
+            <span class="icon-title">ADS</span>
+          </a>
+          <a href="#">
+            <picture>
+              <source type="image/webp" srcset="images/icons/analysis.webp" />
+              <img
+                src="images/icons/analysis.png"
+                width="80px"
+                height="80px"
+                alt="Analysis"
+              />
+            </picture>
+            <span class="icon-title">Analytics</span>
+          </a>
+          <a href="#">
+            <picture>
+              <source type="image/webp" srcset="images/icons/brand.webp" />
+              <img
+                src="images/icons/brand.png"
+                width="80px"
+                height="80px"
+                alt="Brand"
+              />
+            </picture>
+            <span class="icon-title">Branding</span>
+          </a>
+          <a href="#">
+            <picture>
+              <source type="image/webp" srcset="images/icons/concept.webp" />
+              <img
+                src="images/icons/concept.png"
+                width="80px"
+                height="80px"
+                alt="Concept"
+              />
+            </picture>
+            <span class="icon-title">Content Writing</span>
+          </a>
+          <a href="#">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="images/icons/programming.webp"
+              />
+              <img
+                src="images/icons/programming.png"
+                width="80px"
+                height="80px"
+                alt="Programming"
+              />
+            </picture>
+            <span class="icon-title">Web Development</span>
+          </a>
+          <a href="#">
+            <picture>
+              <source type="image/webp" srcset="images/icons/seo.webp" />
+              <img
+                src="images/icons/seo.png"
+                width="80px"
+                height="80px"
+                alt="SEO"
+              />
+            </picture>
+            <span class="icon-title">SEO</span>
+          </a>
+          <a href="#">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="images/icons/social-media.webp"
+              />
+              <img
+                src="images/icons/social-media.png"
+                width="80px"
+                height="80px"
+                alt="Social Media"
+              />
+            </picture>
+            <span class="icon-title">Social Media Management</span>
+          </a>
+          <a href="#">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="images/icons/speedometer.webp"
+              />
+              <img
+                src="images/icons/speedometer.png"
+                width="80px"
+                height="80px"
+                alt="Speedometer"
+              />
+            </picture>
+            <span class="icon-title">Web Speed</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="heading-services">
+        <h2>Our Digital Marketing <span class="highlight">Services</span></h2>
+      </div>
+
+      <div id="service-cards" class="owl-carousel">
+        <div class="card item">
+          <picture>
+            <source type="image/webp" srcset="images/other/webdev.webp" />
+            <img
+              src="images/other/webdev.jpg"
+              alt="Image Description"
+              class="card-image"
+              width="298.4"
+              height="199.26"
+            />
+          </picture>
+          <div class="card-content">
+            <h3 id="card-heading-web" class="card-heading">
+              <span class="signature-color">Website </span>Development
+            </h3>
+            <p class="card-text">
+              This is a brief description or intro to the content of the card,
+              providing enough insight to intrigue the viewer. Intro to the
+              content of the card, providing enough insight to intrigue the
+              viewer. providing enough insight to intrigue the viewer. providing
+              enough insight to intrigue the viewer. Intro to the content of the
+              card, providing enough insight to intrigue the viewer. providing
+              enough insight to intrigue the viewer.
+            </p>
+            <a href="#" class="card-link"
+              >LEARN MORE <span class="arrow">&#8594;</span></a
+            >
+          </div>
+        </div>
+
+        <div class="card item">
+          <picture>
+            <source type="image/webp" srcset="images/other/smm.webp" />
+            <img
+              src="images/other/smm.png"
+              alt="Image Description"
+              class="card-image"
+              width="298.4"
+              height="199.26"
+            />
+          </picture>
+          <div class="card-content">
+            <h3 id="card-heading-smm" class="card-heading">
+              <span class="signature-color">Social Media</span> Marketing
+            </h3>
+            <p class="card-text">
+              This is a brief description or intro to the content of the card,
+              providing enough insight to intrigue the viewer. Intro to the
+              content of the card, providing enough insight to intrigue the
+              viewer. providing enough insight to intrigue the viewer. providing
+              enough insight to intrigue the viewer. Intro to the content of the
+              card, providing enough insight to intrigue the viewer. providing
+              enough insight to intrigue the viewer.
+            </p>
+            <a href="#" class="card-link"
+              >LEARN MORE <span class="arrow">&#8594;</span></a
+            >
+          </div>
+        </div>
+
+        <div class="card item">
+          <picture>
+            <source type="image/webp" srcset="images/other/seo.webp" />
+            <img
+              src="images/other/seo.jpg"
+              alt="Image Description"
+              class="card-image"
+              width="298.4"
+              height="199.26"
+            />
+          </picture>
+          <div class="card-content">
+            <h3 id="card-heading-seo" class="card-heading">
+              <span class="signature-color">S</span>E<span class="signature-color">O</span>
+            </h3>
+            <p class="card-text">
+              This is a brief description or intro to the content of the card,
+              providing enough insight to intrigue the viewer. Intro to the
+              content of the card, providing enough insight to intrigue the
+              viewer. providing enough insight to intrigue the viewer. providing
+              enough insight to intrigue the viewer. Intro to the content of the
+              card, providing enough insight to intrigue the viewer. providing
+              enough insight to intrigue the viewer.
+            </p>
+            <a href="#" class="card-link"
+              >LEARN MORE <span class="arrow">&#8594;</span></a
+            >
+          </div>
+        </div>
+
+        <div class="card item">
+          <picture>
+            <source type="image/webp" srcset="images/other/branding.webp" />
+            <img
+              src="images/other/branding.jpg"
+              alt="Image Description"
+              class="card-image"
+              width="298.4"
+              height="199.26"
+            />
+          </picture>
+          <div class="card-content">
+            <h3 id="card-heading-branding" class="card-heading">
+              <span class="signature-color">Brand</span>ing
+            </h3>
+            <p class="card-text">
+              This is a brief description or intro to the content of the card,
+              providing enough insight to intrigue the viewer. Intro to the
+              content of the card, providing enough insight to intrigue the
+              viewer. providing enough insight to intrigue the viewer. providing
+              enough insight to intrigue the viewer. Intro to the content of the
+              card, providing enough insight to intrigue the viewer. providing
+              enough insight to intrigue the viewer.
+            </p>
+            <a href="#" class="card-link"
+              >LEARN MORE <span class="arrow">&#8594;</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="components/navbar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/home/services.js"></script>
+  </body>
+</html>
