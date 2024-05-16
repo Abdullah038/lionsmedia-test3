@@ -5,7 +5,10 @@ class Navbar extends HTMLElement {
     n.innerHTML = `
       <style>
         header { width: 100%; }
-        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; position: -webkit-sticky; position: sticky; top: 0; z-index: 1000; transition: background-color 0.3s, box-shadow 0.3s; }
+        .navbar-cover{
+  height: 78.97px;
+        }
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; width: 100%; position: fixed; top: 0; z-index: 1000; transition: background-color 0.3s, box-shadow 0.3s; }
         @media (min-width: 2000px) {
           .navbar { justify-content: center; }
           .menu-contact { display: flex; justify-content: space-between; flex-grow: 1; max-width: 2000px; }
@@ -47,14 +50,15 @@ class Navbar extends HTMLElement {
         @media (min-width: 2000px) {
           #contact-link { border-right: 1px solid #e15a5a87; border-radius: 5px; }
         }
+        .sticky-navbar { box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); background-color: white; }
       </style>
-    
+    <div class="navbar-cover">
         <nav class="navbar" id="navbar">
           <div id="logo-link">
             <a href="#home" class="logo">
               <picture>
-                <source type="image/webp" srcset="../images/logos/logo.webp" />
-                <img src="../images/logos/logo.png" width="50" height="52.58" alt="logo" />
+                <source type="image/webp" srcset="images/logos/logo.webp" />
+                <img src="images/logos/logo.png" width="50" height="52.58" alt="logo" />
               </picture>
               <span id="logo-text"> LIONSMEDIA </span>
             </a>
@@ -79,7 +83,7 @@ class Navbar extends HTMLElement {
             </div>
           </div>
         </nav>
-   
+        </div>
     `;
   }
   connectedCallback() {
@@ -89,11 +93,15 @@ class Navbar extends HTMLElement {
       i = this.shadowRoot.querySelector("#navbar");
     n.addEventListener("click", function () {
       a.classList.toggle("active"), document.body.classList.toggle("menu-open");
+      document.body.classList.contains("menu-open")
+        ? (document.body.style.overflow = "hidden")
+        : (document.body.style.overflow = "");
     }),
       e.forEach((n) => {
         n.addEventListener("click", function () {
           a.classList.remove("active"),
             document.body.classList.remove("menu-open");
+          document.body.style.overflow = "";
         });
       });
     let t;
@@ -106,6 +114,7 @@ class Navbar extends HTMLElement {
               window.innerWidth > 768 &&
                 (a.classList.remove("active"),
                 document.body.classList.remove("menu-open"));
+            document.body.style.overflow = "";
           }, 100));
       },
       { passive: !0 }
