@@ -38,7 +38,7 @@ class Navbar extends HTMLElement {
           #contact-link { grid-column: 2; justify-self: end; border: 1px solid #e15a5a87; border-radius: 5px; }
           #contact-link:hover { border-radius: 5px; }
           #contact-link a span { font-size: 12px; border-radius: 5px; padding-right: 0px; }
-          .navbar-links { position: fixed; top: 64px; right: -130%; width: 100%; height: calc(100% - 60px); background-color: #ececec6f; flex-direction: column; align-items: center; transition: right 0.3s ease-out; z-index: 1000; border-radius: 0; }
+          .navbar-links { position: fixed; top: 79px; right: -130%; width: 100%; height: calc(100% - 60px); background-color: #ecececf0; flex-direction: column; align-items: center; transition: right 0.3s ease-out; z-index: 1000; border-radius: 0; }
           .navbar-links.active { right: 0; }
           .navbar-links a { width: 75%; padding: 15px 10px; text-align: center; margin: 0; border-bottom: 1px solid rgba(43, 43, 43, 0.1); }
           .navbar-links a span { font-size: 16px; margin-top: 0; }
@@ -50,7 +50,7 @@ class Navbar extends HTMLElement {
         @media (min-width: 2000px) {
           #contact-link { border-right: 1px solid #e15a5a87; border-radius: 5px; }
         }
-        .sticky-navbar { box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); background-color: white; }
+        .sticky-navbar { box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); background-color: #ffffffc9; }
       </style>
     <div class="navbar-cover">
         <nav class="navbar" id="navbar">
